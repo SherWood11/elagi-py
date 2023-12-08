@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elagi Pharmacy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/imgs/Screenshot 2023-02-02 201050.png">
+</head>
+<body>
+  <div class="container">
+    <h1>Elagi</h1>
+    <form id="medicineForm" action="" method="post">
+      <label for="patientName">Patient Name:</label>
+      <input type="text" id="patientName" name="patientName" required>
+
+      <label for="phoneNumber">Phone Number:</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" required>
+      
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+
+      <label for="residence">Place of Residence:</label>
+      <input type="text" id="residence" name="residence" required>
+
+      <label for="diagnosis">Medical Diagnosis:</label>
+      <textarea id="diagnosis" name="diagnosis" rows="4" required></textarea>
+
+
+      <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+  </div>    
+
+  <script src="script.js"></script>
+
+</body>
+</html>
