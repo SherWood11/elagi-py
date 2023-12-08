@@ -6,29 +6,56 @@
   <title>Elagi Pharmacy</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="/imgs/Screenshot 2023-02-02 201050.png">
+  <link rel="stylesheet" href="/normalize.css">
 </head>
 <body>
   <div class="container">
     <h1>Elagi</h1>
-    <form id="medicineForm" action="" method="post" netlify>
+    <form id="medicineForm" action="" method="post">
       <label for="patientName">Patient Name:</label>
-      <input type="text" id="patientName" name="patientName" required>
+      <input type="text" id="patientName" name="patientName" required placeholder="Enter your full name">
 
       <label for="phoneNumber">Phone Number:</label>
-      <input type="tel" id="phoneNumber" name="phoneNumber" required>
+      <input type="number" id="phoneNumber" name="phoneNumber" required placeholder="Enter you phonenumber">
       
       <label for="age">Age:</label>
-      <input type="number" id="age" name="age" required>
+      <input type="number" id="age" name="age" required placeholder="Enter your age">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Ex.aa@gmail.com">
 
       <label for="residence">Place of Residence:</label>
-      <input type="text" id="residence" name="residence" required>
+      <input type="text" id="residence" name="residence" required placeholder="Ex.Sudan/kassala/almourabaat">
 
-      <label for="diagnosis">Medical Diagnosis:</label>
-      <textarea id="diagnosis" name="diagnosis" rows="4" required></textarea>
+      <!-- ... (other form fields) ... -->
+      <h3>Is the medicine rare?</h3>
+      
+      <label class="checkbox-custom-label">
+        <input type="checkbox" name="medicineRare[]" value="yes">
+        <div class="checkbox-custom"></div>
+        Yes
+    </label>
+
+    <label class="checkbox-custom-label">
+        <input type="checkbox" name="medicineRare[]" value="no">
+        <div class="checkbox-custom"></div>
+        No
+    </label>
+
+    <label class="checkbox-custom-label">
+        <input type="checkbox" name="medicineRare[]" value="notSure">
+        <div class="checkbox-custom"></div>
+        Not Sure
+    </label>
+
+    <!-- ... (other form elements) -->
+
+      <label for="diagnosis">Medicine:</label>
+      <textarea id="diagnosis" name="diagnosis" rows="4" required placeholder="Enter your medicine"></textarea>
 
 
       <button type="submit" onclick="submitForm()">Submit</button>
-    </form>
+    </form> 
   </div>    
 
   <script src="script.js"></script>
