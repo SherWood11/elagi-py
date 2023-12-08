@@ -1,9 +1,8 @@
 body {
-    /* font-family: Arial, sans-serif; */
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 130vh;
     margin: 0;
     background-color: #65b4e4;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -73,3 +72,54 @@ body {
 #diagnosis:hover {
     background-color: rgb(243, 243, 243);
 }
+
+/* ... (previous styles) */
+
+/* Style for checkbox group */
+.checkbox-group {
+    display: flex;
+    flex-direction: column; /* Display checkboxes vertically */
+    margin-bottom: 16px;
+}
+
+label input[type="checkbox"] {
+    display: none; /* Hide the actual checkbox */
+}
+
+label.checkbox-custom-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+}
+
+label .checkbox-custom {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50; /* Checkbox border color */
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+label .checkbox-custom:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 5px;
+    border-left: 2px solid #4CAF50; /* Checkmark color */
+    border-bottom: 2px solid #4CAF50;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+label input[type="checkbox"]:checked + .checkbox-custom:after {
+    display: block;
+}
+
+/* ... (remaining styles) */
